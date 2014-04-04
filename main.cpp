@@ -167,6 +167,8 @@ int main(int argc, char *argv[])
         view.show();
 #endif
 
+    view.setResizeMode(QQuickView::SizeRootObjectToView);
+
     PtyIFace ptyiface(pid, socketM, &term,
                        settings->value("terminal/charset").toString());
 
